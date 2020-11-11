@@ -1,0 +1,42 @@
+@import "src/styles/index";
+
+.partners {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+    margin-right: 120px;
+
+    .logo {
+      width: 180px;
+      height: 180px;
+      background-color: #202020;
+      color: $white-color;
+      font-size: 30px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .active {
+      @extend .logo;
+      background-color: $white-color;
+      color: $black-color;
+      font-weight: 900;
+    }
+  }
+
+  p {
+    font-size: 22px;
+    line-height: 1.6;
+  }
+}

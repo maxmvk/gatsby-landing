@@ -1,0 +1,60 @@
+@import "src/styles/index";
+
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background-color: $black-color;
+}
+
+.container {
+  display: flex;
+  padding: 0 30px 70px;
+  align-items: flex-end;
+  max-width: 1550px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.info {
+  display: flex;
+  color: $light-grey-color;
+
+  p {
+    padding: 0 15px;
+    margin: 0;
+  }
+}
+
+.scroll {
+  margin: 0 20% 0 auto;
+
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  p {
+    color: $light-grey-color;
+    margin: 20px 0 0;
+    font-size: 20px;
+  }
+
+  .icon {
+    color: $white-color;
+    font-size: 42px;
+  }
+}
+
+.icons {
+  display: flex;
+  margin-left: auto;
+
+  a {
+    font-size: 28px;
+    color: $white-color;
+    padding: 0 12px;
+  }
+}

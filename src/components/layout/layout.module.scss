@@ -1,0 +1,17 @@
+@import "src/styles/index";
+
+.layout {
+  margin: 0 auto;
+}
+
+.content {
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $white-color;
+  max-width: 1550px;
+  width: 100%;
+  margin: 0 auto;
+}

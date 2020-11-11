@@ -1,0 +1,66 @@
+@import "src/styles/index";
+
+.contacts {
+  height: 100vh;
+  max-width: 1350px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .info {
+    width: 100%;
+    margin-right: 140px;
+
+    p {
+      font-size: 22px;
+      line-height: 1.6;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 500px;
+    margin: 0;
+
+    input {
+      width: 100%;
+      padding: 10px 15px;
+      background-color: transparent;
+      border: 1px solid $light-grey-color;
+      color: $white-color;
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    textarea {
+      @extend input;
+      resize: none;
+    }
+
+    ::placeholder { 
+      color: $white-color;
+      opacity: 1;
+    }
+    
+    :-ms-input-placeholder {
+      color: $white-color;
+    }
+    
+    ::-ms-input-placeholder { 
+      color: $white-color;
+    }
+
+    button {
+      background-color: transparent;
+      padding: 5px 15px;
+      font-size: 22px;
+      color: $orange-color;
+      cursor: pointer;
+    }
+  }
+}
