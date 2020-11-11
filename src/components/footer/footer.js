@@ -9,7 +9,7 @@ import { useScrollYPosition } from 'react-use-scroll-position';
 export default ({ menuLinks }) => {
 
 const scrollY = useScrollYPosition();
-const blockHeight = document.getElementById("home")?.offsetHeight || 1;
+const blockHeight = typeof document !== `undefined` ? document.getElementById("home")?.offsetHeight || 1 : 1;
 
   return (
     <footer className={styles.footer}>

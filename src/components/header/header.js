@@ -24,7 +24,7 @@ export default function Header ({ menuLinks }) {
   }, []);
 
   const scrollY = useScrollYPosition();
-  const blockHeight = document.getElementById("home")?.offsetHeight || 1;
+  const blockHeight = typeof document !== `undefined` ? document.getElementById("home")?.offsetHeight || 1 : 1;
 
   return (
     <StaticQuery
