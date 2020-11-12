@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./footer.module.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
@@ -7,9 +7,14 @@ import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { useScrollYPosition } from 'react-use-scroll-position';
 
 export default ({ menuLinks }) => {
+  const [blockHeight, setBlockHeight] = useState(null);
+  const scrollY = useScrollYPosition();
+  const halfHeight = blockHeight/2;
+  const scrolled = scrollY+blockHeight;
 
-const scrollY = useScrollYPosition();
-const blockHeight = typeof document !== `undefined` ? document.getElementById("home")?.offsetHeight || 1 : 1;
+  useEffect(() => {
+    setBlockHeight(typeof document !== `undefined` ? document.getElementById("home")?.offsetHeight: null);
+  }, [])
 
   return (
     <footer className={styles.footer}>
@@ -21,7 +26,7 @@ const blockHeight = typeof document !== `undefined` ? document.getElementById("h
         </div>
         <div className={styles.scroll}>
           {menuLinks.map((link, index) => (
-            (scrollY+blockHeight>=(blockHeight*index)-blockHeight/2)&&(scrollY+blockHeight<blockHeight*(index+1)-blockHeight/2)
+            (scrolled>=(blockHeight*index)-halfHeight)&&(scrolled<blockHeight*(index+1)-halfHeight)
             ?<AnchorLink to={link.link} key={link.name} className={styles.scroll}>
               <FontAwesomeIcon icon={faArrowAltCircleDown} className={styles.icon}/>
               <p>Scroll down</p>
