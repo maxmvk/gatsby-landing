@@ -16,7 +16,7 @@ export const TUTORIAL_IMAGE_URL_QUERY = graphql`
   }
 `;
 
-export default () => {
+const Tutorial = () => {
   return (
     <StaticQuery
       query={TUTORIAL_IMAGE_URL_QUERY}
@@ -47,3 +47,5 @@ export default () => {
     />
   )
 };
+
+export default Tutorial;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./partners.module.scss";
 
-export default ({ partners }) => {
+const Partners = ({ partners }) => {
 
   const [partnerNumber, setNumber] = useState(0);
 
@@ -23,3 +23,5 @@ export default ({ partners }) => {
     </div>
   );
 }
+
+export default Partners;

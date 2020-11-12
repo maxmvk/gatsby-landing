@@ -9,7 +9,7 @@ import Feedback from "../components/home/feedback/feedback";
 import Contacts from "../components/home/contacts/contacts";
 import Beta from "../components/home/beta/beta";
 
-export default ({ data }) => (
+const LandingPage = ({ data }) => (
   <Layout>
     <Home imageUrl={data.allFile.edges[0].node.publicURL}/>
     <About />
@@ -40,3 +40,5 @@ export const query = graphql`
     }
   }
 `
+
+export default LandingPage;

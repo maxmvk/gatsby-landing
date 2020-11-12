@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { Link } from "gatsby";
+import React, { useEffect, useState } from "react";
 import styles from "./header.module.scss"
 import { StaticQuery, graphql } from "gatsby";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
@@ -17,14 +16,14 @@ export const LOGO_IMAGE_URL_QUERY = graphql`
   }
 `;
 
-export default function Header ({ menuLinks }) {
+const Header = ({ menuLinks }) => {
+  const [blockHeight, setBlockHeight] = useState(null);
+  const scrollY = useScrollYPosition();
+  const halfHeight = blockHeight/2;
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  const scrollY = useScrollYPosition();
-  const blockHeight = document.getElementById("home")?.offsetHeight || 1;
+    setBlockHeight(typeof document !== `undefined` ? document.getElementById("home")?.offsetHeight: null);
+  }, [])
 
   return (
     <StaticQuery
@@ -40,12 +39,19 @@ export default function Header ({ menuLinks }) {
       }) => (
         <header className={styles.header}>
           <div className={styles.container}>
-            <Link to="/">
+            <AnchorLink to="/#home">
               <img src={publicURL} alt="logo" className={styles.logo}/>
-            </Link>
+            </AnchorLink>
             <div className={styles.nav}>
               {menuLinks.map((link, index) => (
-                <AnchorLink to={link.link} key={link.name} className={(scrollY>=(blockHeight*index)-blockHeight/2)&&(scrollY<blockHeight*(index+1)-blockHeight/2)? styles.active: ""}>{link.name}</AnchorLink>
+                <AnchorLink 
+                  to={link.link} 
+                  key={link.name} 
+                  className={(scrollY>=(blockHeight*index)-halfHeight)&&(scrollY<blockHeight*(index+1)-halfHeight)
+                    ? styles.active
+                    : ""}
+                  title={link.name}
+                />
               ))}
             </div>
           </div>
@@ -54,3 +60,5 @@ export default function Header ({ menuLinks }) {
     />
   )
 }
+
+export default Header;
