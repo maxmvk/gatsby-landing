@@ -1,8 +1,6 @@
 import React from "react";
-
 import Header from "../header/header";
 import Footer from "../footer/footer";
-
 import styles from "./layout.module.scss"
 import { StaticQuery, graphql } from "gatsby";
 
@@ -19,7 +17,7 @@ export const MENU_LINKS_QUERY = graphql`
   }
 `;
 
-export default ({ children }) => {
+const Layout = ({ children }) => {
 
   return (
     <StaticQuery
@@ -36,3 +34,5 @@ export default ({ children }) => {
     />
   )
 };
+
+export default Layout;

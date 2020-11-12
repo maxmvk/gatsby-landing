@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "gatsby";
 import styles from "./header.module.scss"
 import { StaticQuery, graphql } from "gatsby";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
@@ -17,7 +16,7 @@ export const LOGO_IMAGE_URL_QUERY = graphql`
   }
 `;
 
-export default function Header ({ menuLinks }) {
+const Header = ({ menuLinks }) => {
   const [blockHeight, setBlockHeight] = useState(null);
   const scrollY = useScrollYPosition();
   const halfHeight = blockHeight/2;
@@ -61,3 +60,5 @@ export default function Header ({ menuLinks }) {
     />
   )
 }
+
+export default Header;

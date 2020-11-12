@@ -6,7 +6,7 @@ import { faArrowAltCircleDown } from "@fortawesome/free-solid-svg-icons";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { useScrollYPosition } from 'react-use-scroll-position';
 
-export default ({ menuLinks }) => {
+const Footer = ({ menuLinks }) => {
   const [blockHeight, setBlockHeight] = useState(null);
   const scrollY = useScrollYPosition();
   const halfHeight = blockHeight/2;
@@ -43,3 +43,5 @@ export default ({ menuLinks }) => {
     </footer>
   );
 }
+
+export default Footer;

@@ -3,7 +3,7 @@ import styles from "./beta.module.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
 
-export default () => (
+const Beta = () => (
   <div id="beta" className={styles.beta}>
     <div className={styles.program}>
       <h1>Managing the beta user program</h1>
@@ -24,3 +24,5 @@ export default () => (
     <FontAwesomeIcon icon={faArrowAltCircleRight} className={styles.icon}/>
   </div>
 );
+
+export default Beta;

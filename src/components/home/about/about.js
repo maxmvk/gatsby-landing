@@ -14,7 +14,7 @@ export const ABOUT_IMAGE_URL_QUERY = graphql`
   }
 `;
 
-export default () => {
+const About = () => {
   return (
     <StaticQuery
       query={ABOUT_IMAGE_URL_QUERY}
@@ -64,3 +64,5 @@ export default () => {
     />
   )
 };
+
+export default About;
