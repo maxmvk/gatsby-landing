@@ -40,9 +40,9 @@ export default function Header ({ menuLinks }) {
       }) => (
         <header className={styles.header}>
           <div className={styles.container}>
-            <Link to="/">
+            <AnchorLink to="/#home">
               <img src={publicURL} alt="logo" className={styles.logo}/>
-            </Link>
+            </AnchorLink>
             <div className={styles.nav}>
               {menuLinks.map((link, index) => (
                 <AnchorLink 
