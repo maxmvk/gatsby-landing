@@ -28,6 +28,7 @@
     "node-sass": "^4.14.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-reveal": "^1.2.2",
     "react-textarea-autosize": "^8.3.0",
     "react-typography": "^0.16.19",
     "react-use-scroll-position": "^2.0.0",

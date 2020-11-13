@@ -1,0 +1,23 @@
+@import "src/styles/index";
+
+.container {
+  display: flex;
+
+  .promotion {
+    margin-right: 12px;
+    max-width: 375px;
+    width: 100%;
+
+    div {
+      background-color: $white-color;
+      width: 375px;
+      height: 375px;
+    }
+
+    p {
+      font-size: 22px;
+      line-height: 1.6;
+      margin: 20px 0 0;
+    }
+  }
+}
