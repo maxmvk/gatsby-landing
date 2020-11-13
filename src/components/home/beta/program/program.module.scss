@@ -1,0 +1,19 @@
+.list { 
+  counter-reset: item;
+  list-style-type: none;
+  margin: 0 0 0 70px;
+
+  li { 
+    display: block; 
+    font-size: 22px;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  li:before { 
+    content: counter(item) "  "; 
+    counter-increment: item;
+    margin-right: 50px;
+    margin-left: -70px;
+  }
+}
