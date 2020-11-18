@@ -1,60 +1,16 @@
 @import "src/styles/index";
 
 .feedback {
-  height: 100vh;
+  @extend %anchor-section-column;
   max-width: 1150px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: stretch;
 
-  p {
-    font-size: 22px;
-    line-height: 1.6;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  &__form {
+    @extend %custom-form;
     margin-top: 30px;
 
-    input {
-      max-width: 500px;
-      width: 100%;
-      padding: 10px 15px;
-      background-color: transparent;
-      border: 1px solid $light-grey-color;
-      color: $white-color;
-      font-size: 22px;
-      margin-bottom: 12px;
-    }
-
     textarea {
-      @extend input;
-      resize: none;
       max-width: 1050px;
-    }
-
-    ::placeholder { 
-      color: $white-color;
-      opacity: 1;
-    }
-    
-    :-ms-input-placeholder {
-      color: $white-color;
-    }
-    
-    ::-ms-input-placeholder { 
-      color: $white-color;
-    }
-
-    button {
-      background-color: transparent;
-      padding: 5px 15px;
-      font-size: 22px;
-      color: $orange-color;
-      cursor: pointer;
     }
   }
 }

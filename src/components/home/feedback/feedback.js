@@ -22,7 +22,7 @@ const Feedback = () => {
         voluptatum in alias veniam quos earum id sit saepe nostrum maxime quaerat, 
         molestiae fugiat eum quia voluptas. Non pulvinar neque laoreet suspendisse interdum.
       </p>
-      <form onSubmit={handleSubmit} autoComplete="off">
+      <form onSubmit={handleSubmit} autoComplete="off" className={styles.feedback__form}>
         <input type="text" name="name" placeholder="Name" value={state.name} onChange={handleInputChange}/>
         <input type="text" name="email" placeholder="Email" value={state.email} onChange={handleInputChange}/>
         <TextareaAutosize 

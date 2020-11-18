@@ -9,8 +9,11 @@ const Partners = ({ partners }) => {
     <div id="partners" className={styles.partners}>
       <div className={styles.grid}>
         {partners.map((partner, index) => (
-          <button key={index} className={partnerNumber===index? styles.active: styles.logo} onClick={() => setNumber(index)}>
-            {partner.title}
+          <button 
+            key={index} 
+            className={partnerNumber===index? styles.grid__logo_active: styles.grid__logo} 
+            onClick={() => setNumber(index)}
+          >{partner.title}
           </button>
         ))}
       </div>

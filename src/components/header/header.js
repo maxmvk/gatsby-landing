@@ -38,17 +38,17 @@ const Header = ({ menuLinks }) => {
         }
       }) => (
         <header className={styles.header}>
-          <div className={styles.container}>
+          <div className={styles.header__container}>
             <AnchorLink to="/#home">
-              <img src={publicURL} alt="logo" className={styles.logo}/>
+              <img src={publicURL} alt="logo" className={styles.header__logo}/>
             </AnchorLink>
-            <div className={styles.nav}>
+            <div className={styles.header__nav}>
               {menuLinks.map((link, index) => (
                 <AnchorLink 
                   to={link.link} 
                   key={link.name} 
                   className={(scrollY>=(blockHeight*index)-halfHeight)&&(scrollY<blockHeight*(index+1)-halfHeight)
-                    ? styles.active
+                    ? styles.header__nav_active
                     : ""}
                   title={link.name}
                 />

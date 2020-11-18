@@ -16,7 +16,7 @@ const Contacts = () => {
 
   return (
     <div id="contacts" className={styles.contacts}>
-      <div className={styles.info}>
+      <div className={styles.contacts__info}>
         <h1>Info</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
@@ -31,7 +31,7 @@ const Contacts = () => {
           pretium nibh.
         </p>
       </div>
-      <form onSubmit={handleSubmit} autoComplete="off">
+      <form onSubmit={handleSubmit} autoComplete="off" className={styles.contacts__form}>
         <h1>Contact Us</h1>
         <input type="text" name="name" placeholder="Name" value={state.name} onChange={handleInputChange}/>
         <input type="text" name="email" placeholder="Email" value={state.email} onChange={handleInputChange}/>

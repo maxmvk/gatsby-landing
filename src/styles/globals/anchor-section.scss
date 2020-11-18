@@ -1,0 +1,19 @@
+%anchor-section-column {
+  @include flex-column-center;
+  height: 100vh;
+  width: 100%;
+
+  p {
+    @include font-normal-m2;
+  }
+}
+
+%anchor-section-row {
+  @include flex-row-center;
+  height: 100vh;
+  width: 100%;
+
+  p {
+    @include font-normal-m2;
+  }
+}

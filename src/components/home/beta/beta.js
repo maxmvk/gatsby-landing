@@ -25,11 +25,11 @@ const Beta = () => {
 
   return (
     <div id="beta" className={styles.beta}>
-      <div className={styles.content}>
+      <div className={styles.beta__content}>
         {switchContent(slideNumber)}
       </div>
       <button>
-        <FontAwesomeIcon icon={faArrowAltCircleRight} className={styles.icon} onClick={handleNextSlide}/>
+        <FontAwesomeIcon icon={faArrowAltCircleRight} className={styles.beta__icon} onClick={handleNextSlide}/>
       </button>
     </div>
   )

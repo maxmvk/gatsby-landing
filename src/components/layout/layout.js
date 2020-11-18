@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
       render={data => (
         <div className={styles.layout}>
           <Header menuLinks={data.site.siteMetadata.menuLinks}/>
-          <div className={styles.content}>
+          <div className={styles.layout__content}>
             {children}
           </div>
           <Footer menuLinks={data.site.siteMetadata.menuLinks}/>

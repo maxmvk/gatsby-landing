@@ -18,7 +18,7 @@ const BetaUser = () => {
     <Slide right duration={500}>
       <h1>Become beta user</h1>
       <form onSubmit={handleSubmit} className={styles.betaForm} autoComplete="off">
-        <div className={styles.betaInputs}>
+        <div className={styles.betaForm__inputs}>
           <input type="text" name="name" placeholder="Name" value={state.name} onChange={handleInputChange}/>
           <input type="text" name="email" placeholder="Email" value={state.email} onChange={handleInputChange}/>
           <input type="text" name="region" placeholder="Region" value={state.region} onChange={handleInputChange}/>
