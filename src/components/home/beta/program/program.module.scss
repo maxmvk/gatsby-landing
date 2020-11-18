@@ -1,12 +1,13 @@
+@import "src/styles/index";
+
 .list { 
   counter-reset: item;
   list-style-type: none;
   margin: 0 0 0 70px;
 
   li { 
-    display: block; 
-    font-size: 22px;
-    line-height: 1.6;
+    @include font-normal-m2;
+    display: block;
     margin: 0;
   }
   

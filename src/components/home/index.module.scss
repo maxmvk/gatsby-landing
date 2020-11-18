@@ -1,7 +1,5 @@
+@import "src/styles/index";
+
 .home {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @extend %anchor-section-column;
 }

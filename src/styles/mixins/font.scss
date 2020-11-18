@@ -4,99 +4,41 @@ $font-weight-medium: 500;
 $font-weight-semi-bold: 700;
 $font-weight-bold: 900;
 
-$font-size-xxs: 10px;
 $font-size-xs: 12px;
-$font-size-s: 14px;
-$font-size-m: 16px;
-$font-size-l: 20px;
-$font-size-xl: 30px;
+$font-size-s: 16px;
+$font-size-m1: 20px;
+$font-size-m2: 22px;
+$font-size-m3: 24px;
+$font-size-l: 32px;
+$font-size-xl: 72px;
 
-@mixin font-primary-normal-xxs {
-  font-size: $font-size-xxs;
+@mixin font-normal-m1 {
+  font-size: $font-size-m1;
   font-weight: $font-weight-normal;
 }
 
-@mixin font-primary-normal-xs {
-  font-size: $font-size-xs;
+@mixin font-normal-m2 {
+  font-size: $font-size-m2;
+  font-weight: $font-weight-normal;
+  line-height: 1.6;
+}
+
+@mixin font-normal-m3 {
+  font-size: $font-size-m3;
   font-weight: $font-weight-normal;
 }
 
-@mixin font-primary-xs {
-  font-size: $font-size-xs;
-  font-weight: $font-weight-medium;
-}
-
-@mixin font-primary-light-xs {
-  font-size: $font-size-xs;
-  font-weight: $font-weight-light;
-}
-
-@mixin font-primary-bold-xs {
-  font-size: $font-size-xs;
-  font-weight: $font-weight-bold;
-}
-
-@mixin font-primary-light-s {
-  font-size: $font-size-s;
-  font-weight: $font-weight-light;
-}
-
-@mixin font-primary-normal-s {
-  font-size: $font-size-s;
-  font-weight: $font-weight-normal;
-}
-
-@mixin font-primary-s {
-  font-size: $font-size-s;
-  font-weight: $font-weight-medium;
-}
-
-@mixin font-primary-semi-bold-s {
-  font-size: $font-size-s;
-  font-weight: $font-weight-semi-bold;
-}
-
-@mixin font-primary-normal-l {
-  font-size: $font-size-l;
-  font-weight: $font-weight-normal;
-}
-
-@mixin font-primary-l {
-  font-size: $font-size-l;
-  font-weight: $font-weight-medium;
-}
-
-@mixin font-primary-bold-l {
-  font-size: $font-size-l;
-  font-weight: $font-weight-bold;
-}
-
-@mixin font-primary-semi-bold-l {
+@mixin font-semi-bold-l {
   font-size: $font-size-l;
   font-weight: $font-weight-semi-bold;
 }
 
-@mixin font-primary-m {
-  font-size: $font-size-m;
-  font-weight: $font-weight-medium;
-}
-
-@mixin font-primary-normal-m {
-  font-size: $font-size-m;
-  font-weight: $font-weight-normal;
-}
-
-@mixin font-primary-semi-bold-m {
-  font-size: $font-size-m;
-  font-weight: $font-weight-semi-bold;
-}
-
-@mixin font-primary-bold-m {
-  font-size: $font-size-m;
+@mixin font-bold-l {
+  font-size: $font-size-l;
   font-weight: $font-weight-bold;
 }
 
-@mixin font-primary-xl {
+@mixin font-semi-bold-xl {
   font-size: $font-size-xl;
-  font-weight: $font-weight-normal;
+  font-weight: $font-weight-semi-bold;
 }

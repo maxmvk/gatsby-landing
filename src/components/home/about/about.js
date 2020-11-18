@@ -37,10 +37,9 @@ const About = () => {
               voluptate at voluptatibus vero consectetur veniam reprehenderit, 
               cupiditate deserunt obcaecati animi nemo cum aspernatur iure!
               Inventore, aliquid adipisci recusandae reiciendis sapiente, 
-              voluptatum in alias veniam quos earum id sit saepe nostrum maxime quaerat, 
-              molestiae fugiat eum quia voluptas. 
+              voluptatum in alias veniam quos earum id sit saepe nostrum maxime quaerat. 
             </p>
-            <div className={styles.numbers}>
+            <div className={styles.about__numbers}>
               <div>
                 <h3>20</h3>
                 <p>Producers</p>

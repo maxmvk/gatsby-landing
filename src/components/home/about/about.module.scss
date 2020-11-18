@@ -1,42 +1,32 @@
+@import "src/styles/index";
+
 .about {
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  @extend %anchor-section-row;
 
   img {
     margin-right: 140px;
   }
 
-  p {
-    font-size: 20px;
-    line-height: 1.6;
-    margin-bottom: 50px;
-  }
-}
-
-.numbers {
-  display: flex;
-  justify-content: space-between;
-  max-width: 800px;
-  width: 100%;
-  margin-top: 20px;
-
-  div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 20px;
-  }
-
-  h3 {
-    font-size: 72px;
-    margin-bottom: 10px;
-  }
-
-  p {
-    font-size: 24px;
-    margin: 0;
+  &__numbers {
+    @include flex-row-center;
+    justify-content: space-between;
+    max-width: 800px;
+    width: 100%;
+    margin-top: 50px;
+  
+    div {
+      @include flex-column-center;
+      margin-right: 20px;
+    }
+  
+    h3 {
+      @include font-semi-bold-xl;
+      margin-bottom: 10px;
+    }
+  
+    p {
+      @include font-normal-m3;
+      margin: 0;
+    }
   }
 }

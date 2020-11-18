@@ -1,0 +1,49 @@
+%custom-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin: 0;
+
+  input, textarea, :active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+  }
+
+  input {
+    @include font-normal-m2;
+    max-width: 500px;
+    width: 100%;
+    padding: 8px 15px;
+    background-color: transparent;
+    border: 1px solid $light-grey-color;
+    color: $white-color;
+    margin-bottom: 12px;
+  }
+
+  textarea {
+    @extend input;
+    resize: none;
+  }
+
+  ::placeholder { 
+    color: $white-color;
+    opacity: 1;
+  }
+  
+  :-ms-input-placeholder {
+    color: $white-color;
+  }
+  
+  ::-ms-input-placeholder { 
+    color: $white-color;
+  }
+
+  button {
+    @include font-normal-m2;
+    background-color: transparent;
+    padding: 5px 15px;
+    color: $orange-color;
+    cursor: pointer;
+  }
+}

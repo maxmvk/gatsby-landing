@@ -3,33 +3,35 @@ import styles from "./feedback.module.scss";
 import TextareaAutosize from 'react-textarea-autosize';
 
 const Feedback = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [state, setState] = useState({ name: "", email: "", message: "" });
+
+  const handleInputChange = event => {
+    setState({...state, [event.target.name]: event.target.value})
+  }
 
   const handleSubmit = event => {
     event.preventDefault()
-    console.log(name, email, message)
+    console.log(state)
   }
 
   return (
     <div id="feedback" className={styles.feedback}>
       <h1>Send your feedback</h1>
       <p>
-          Inventore, aliquid adipisci recusandae reiciendis sapiente, 
-          voluptatum in alias veniam quos earum id sit saepe nostrum maxime quaerat, 
-          molestiae fugiat eum quia voluptas. Non pulvinar neque laoreet suspendisse interdum.
+        Inventore, aliquid adipisci recusandae reiciendis sapiente, 
+        voluptatum in alias veniam quos earum id sit saepe nostrum maxime quaerat, 
+        molestiae fugiat eum quia voluptas. Non pulvinar neque laoreet suspendisse interdum.
       </p>
-      <form onSubmit={handleSubmit}>
-        <input type="text" name="name" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)}/>
-        <input type="text" name="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+      <form onSubmit={handleSubmit} autoComplete="off" className={styles.feedback__form}>
+        <input type="text" name="name" placeholder="Name" value={state.name} onChange={handleInputChange}/>
+        <input type="text" name="email" placeholder="Email" value={state.email} onChange={handleInputChange}/>
         <TextareaAutosize 
           maxRows="10" 
           type="text" 
           name="message" 
           placeholder="Message" 
-          value={message} 
-          onChange={(e) => setMessage(e.target.value)}
+          value={state.message} 
+          onChange={handleInputChange}
         />
         <button type="submit">Send</button>
       </form>

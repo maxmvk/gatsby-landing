@@ -30,17 +30,17 @@ const Tutorial = () => {
         }
       }) => (
         <div id="tutorial" className={styles.tutorial}>
-          <div className={styles.slider}>
-            <FontAwesomeIcon icon={faArrowAltCircleLeft} className={styles.icon}/>
+          <div className={styles.tutorial__slider}>
+            <FontAwesomeIcon icon={faArrowAltCircleLeft}/>
             <img src={publicURL} alt="tutorial"/>
-            <FontAwesomeIcon icon={faArrowAltCircleRight} className={styles.icon}/>
+            <FontAwesomeIcon icon={faArrowAltCircleRight}/>
           </div>
           <h1>Screen Name</h1>
           <p>
             Inventore, aliquid adipisci recusandae reiciendis sapiente, 
             voluptatum in alias veniam quos earum id sit saepe nostrum maxime quaerat, 
             molestiae fugiat eum quia voluptas. Lorem ipsum dolor sit amet, 
-            consectetur adipisicing elit. Recusandae aliquid eum neque.
+            consectetur adipisicing elit.
           </p>
         </div>
       )}
