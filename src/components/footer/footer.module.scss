@@ -2,7 +2,7 @@
 
 .footer {
   position: fixed;
-  width: 100%;
+  width: calc(100% - 400px);
   bottom: 0;
   background-color: $black-color;
 
@@ -19,25 +19,6 @@
     p {
       padding: 0 15px;
       margin: 0;
-    }
-  }
-
-  &__scroll {
-    margin: 0 20% 0 auto;
-
-    a {
-      @include flex-column-center;
-      margin: 0;
-    }
-
-    p {
-      @include font-normal-m1;
-      color: $light-grey-color;
-      margin: 20px 0 0;
-    }
-
-    &_icon {
-      font-size: 42px;
     }
   }
 

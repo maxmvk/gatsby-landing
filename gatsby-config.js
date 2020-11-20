@@ -9,31 +9,31 @@ module.exports = {
     menuLinks: [
       {
         name: `Home`,
-        link: `/#home`
+        link: `/`
       },
       {
         name: `About`,
-        link: `/#about`
+        link: `/about`
       },
       {
         name: `Tutorial`,
-        link: `/#tutorial`
+        link: `/tutorial`
       },
       {
-        name: `Partners`,
-        link: `/#partners`
+        name: `FAQ`,
+        link: `/faq`
       },
       {
         name: `Feedback`,
-        link: `/#feedback`
+        link: `/feedback`
       },
       {
         name: `Contacts`,
-        link: `/#contacts`
+        link: `/contacts`
       },
       {
         name: `Become Beta User`,
-        link: `/#beta`
+        link: `/beta`
       }
     ],
     partners: [

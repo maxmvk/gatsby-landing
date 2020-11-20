@@ -2,7 +2,7 @@
 
 .header {
   position: fixed;
-  width: 100%;
+  width: calc(100% - 400px);
   background-color: $black-color;
 
   &__container {

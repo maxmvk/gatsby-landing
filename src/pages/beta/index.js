@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import styles from "./beta.module.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
-import Promotions from "./promotions/promotions";
-import Program from "./program/program";
-import Engagement from "./engagement/engagement";
-import BetaUser from "./beta-user/beta-user";
+import Promotions from "../../components/beta/promotions/promotions";
+import Program from "../../components/beta/program/program";
+import Engagement from "../../components/beta/engagement/engagement";
+import BetaUser from "../../components/beta/beta-user/beta-user";
+import Layout from "../../components/layout/layout";
 
 const Beta = () => {
   let [slideNumber, setSlideNumber] = useState(1);
@@ -24,14 +25,16 @@ const Beta = () => {
   }
 
   return (
-    <div id="beta" className={styles.beta}>
-      <div className={styles.beta__content}>
-        {switchContent(slideNumber)}
+    <Layout>
+      <div className={styles.beta}>
+        <div className={styles.beta__content}>
+          {switchContent(slideNumber)}
+        </div>
+        <button>
+          <FontAwesomeIcon icon={faArrowAltCircleRight} className={styles.beta__icon} onClick={handleNextSlide}/>
+        </button>
       </div>
-      <button>
-        <FontAwesomeIcon icon={faArrowAltCircleRight} className={styles.beta__icon} onClick={handleNextSlide}/>
-      </button>
-    </div>
+    </Layout>
   )
 };
 

@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from "./header.module.scss"
-import { StaticQuery, graphql } from "gatsby";
-import { AnchorLink } from "gatsby-plugin-anchor-links";
-import { useScrollYPosition } from 'react-use-scroll-position';
+import { StaticQuery, graphql, Link } from "gatsby";
 
 export const LOGO_IMAGE_URL_QUERY = graphql`
   {
@@ -17,13 +15,6 @@ export const LOGO_IMAGE_URL_QUERY = graphql`
 `;
 
 const Header = ({ menuLinks }) => {
-  const [blockHeight, setBlockHeight] = useState(null);
-  const scrollY = useScrollYPosition();
-  const halfHeight = blockHeight/2;
-
-  useEffect(() => {
-    setBlockHeight(typeof document !== `undefined` ? document.getElementById("home")?.offsetHeight: null);
-  }, [])
 
   return (
     <StaticQuery
@@ -39,19 +30,17 @@ const Header = ({ menuLinks }) => {
       }) => (
         <header className={styles.header}>
           <div className={styles.header__container}>
-            <AnchorLink to="/#home">
+            <Link to="/">
               <img src={publicURL} alt="logo" className={styles.header__logo}/>
-            </AnchorLink>
+            </Link>
             <div className={styles.header__nav}>
-              {menuLinks.map((link, index) => (
-                <AnchorLink 
+              {menuLinks.map(link => (
+                <Link 
                   to={link.link} 
                   key={link.name} 
-                  className={(scrollY>=(blockHeight*index)-halfHeight)&&(scrollY<blockHeight*(index+1)-halfHeight)
-                    ? styles.header__nav_active
-                    : ""}
-                  title={link.name}
-                />
+                  activeClassName={styles.header__nav_active}
+                >{link.name}
+                </Link>
               ))}
             </div>
           </div>
