@@ -8,8 +8,8 @@
   }
 
   &__content {
-    @extend %content-container;
     @include flex-column-center;
-    padding: 0 30px;
+    color: $white-color;
+    padding: 0 70px;
   }
 }

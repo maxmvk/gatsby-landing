@@ -12,6 +12,17 @@ $font-size-m3: 24px;
 $font-size-l: 32px;
 $font-size-xl: 72px;
 
+@mixin font-normal-s {
+  font-size: $font-size-s;
+  font-weight: $font-weight-normal;
+  line-height: 1.6;
+}
+
+@mixin font-bold-s {
+  font-size: $font-size-s;
+  font-weight: $font-weight-bold;
+}
+
 @mixin font-normal-m1 {
   font-size: $font-size-m1;
   font-weight: $font-weight-normal;

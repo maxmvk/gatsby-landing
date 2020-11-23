@@ -1,6 +1,7 @@
 @import "src/styles/index";
 
 .sidebar {
-  width: 400px;
+  max-width: 350px;
+  width: 100%;
   border-right: 1px solid $dark-grey-color;
 }

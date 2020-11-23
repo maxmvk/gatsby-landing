@@ -2,33 +2,33 @@
 
 .footer {
   position: fixed;
-  width: calc(100% - 400px);
+  width: calc(100% - 350px);
   bottom: 0;
   background-color: $black-color;
+  display: flex;
+  align-items: center;
+  padding: 0 70px 35px;
 
-  &__container {
-    @extend %content-container;
-    padding: 0 30px 70px;
-    align-items: flex-end;
-  }
-
-  &__info {
-    display: flex;
+  &__item {
+    margin: 0 30px;
     color: $light-grey-color;
+    height: 32px;
 
-    p {
-      padding: 0 15px;
-      margin: 0;
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &_active {
+      @include underlined-text($orange-color);
+      color: $white-color;
     }
   }
 
-  &__icons {
-    display: flex;
-    margin-left: auto;
+  svg {
+    font-size: 28px;
+  }
 
-    a {
-      font-size: 28px;
-      padding: 0 12px;
-    }
+  p {
+    margin-bottom: 0;
   }
 }

@@ -29,21 +29,17 @@ const Header = ({ menuLinks }) => {
         }
       }) => (
         <header className={styles.header}>
-          <div className={styles.header__container}>
-            <Link to="/">
-              <img src={publicURL} alt="logo" className={styles.header__logo}/>
+          {/* <Link to="/">
+            <img src={publicURL} alt="logo" className={styles.header__logo}/>
+          </Link> */}
+          {menuLinks.map(link => (
+            <Link 
+              to={link.link} 
+              key={link.name} 
+              activeClassName={styles.header_active}
+            >{link.name}
             </Link>
-            <div className={styles.header__nav}>
-              {menuLinks.map(link => (
-                <Link 
-                  to={link.link} 
-                  key={link.name} 
-                  activeClassName={styles.header__nav_active}
-                >{link.name}
-                </Link>
-              ))}
-            </div>
-          </div>
+          ))}
         </header>
       )}
     />

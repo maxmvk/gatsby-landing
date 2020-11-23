@@ -2,4 +2,27 @@
 
 .home {
   @extend %anchor-section-column;
+  align-items: flex-start;
+
+  p {
+    max-width: 750px;
+  }
+
+  &__buttons {
+    display: flex;
+
+    a {
+      @extend %button;
+
+      &:first-child {
+        @include button-theme($orange-color);
+      }
+
+      &:last-child {
+        @include button-theme(transparent);
+        border: 3px solid $orange-color;
+        margin-left: 25px;
+      }
+    }
+  }
 }
