@@ -1,40 +1,44 @@
-import { graphql } from "gatsby";
 import React from "react";
 import Layout from "../../components/layout/layout";
 import styles from "./about.module.scss";
 
-const About = ({ data }) => {
-  const publicURL = data.allFile.edges[0].node.publicURL;
+const About = () => {
 
   return (
     <Layout>
       <div className={styles.about}>
-        <img src={publicURL} alt="about"/>
-        <div>
-          <h1>About CELLR</h1>
+        <div className={styles.about__info}>
+          <h1>About</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-            Recusandae aliquid eum neque. Ullam, praesentium aliquam 
-            voluptate at voluptatibus vero consectetur veniam reprehenderit, 
-            cupiditate deserunt obcaecati animi nemo cum aspernatur iure!
-            Inventore, aliquid adipisci recusandae reiciendis sapiente, 
-            voluptatum in alias veniam quos earum id sit saepe nostrum maxime quaerat. 
+            CELLR was born from the great dinners and wines shared by a small group of friends. 
+            A group of friends who would collectively open their cellars to share offerings and 
+            vintages that could no longer be easily found. Vintages, that if found, were 
+            subjected to the more formal and pricey auction or broker process. We wanted simplicity. 
+            We wanted to increase our circle of friends who also had an appreciation for great wines. 
+            We anted an app that was easy to use, search, and gave us recommendations based on what 
+            we were actually drinking and not what was being sold on closeout by one of the many apps. 
+            We wanted efficiency, trade, and ease of use…and thus, we founded CELLR for on-demand 
+            cellar access.
           </p>
-          <div className={styles.about__numbers}>
+        </div>
+        <div className={styles.about__numbers}>
+          <div className={styles.about__group}>
             <div>
-              <h3>20</h3>
+              <h3>10k+</h3>
               <p>Producers</p>
             </div>
             <div>
-              <h3>67</h3>
+              <h3>28</h3>
               <p>Countries</p>
             </div>
+          </div>
+          <div className={styles.about__group}>
             <div>
-              <h3>41</h3>
+              <h3>100+</h3>
               <p>Subregions</p>
             </div>
             <div>
-              <h3>182k</h3>
+              <h3>Beta</h3>
               <p>Users</p>
             </div>
           </div>
@@ -43,17 +47,5 @@ const About = ({ data }) => {
     </Layout>
   )
 };
-
-export const aboutQuery = graphql`
-  {
-    allFile(filter: { name: { eq: "about" } }) {
-      edges {
-        node {
-          publicURL
-        }
-      }
-    }
-  }
-`;
 
 export default About;
