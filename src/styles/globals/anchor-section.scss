@@ -1,6 +1,7 @@
 %anchor-section-column {
   @include flex-column-center;
-  height: 100vh;
+  height: calc(100vh - 120px);
+  padding-top: 140px;
   width: 100%;
 
   p {
