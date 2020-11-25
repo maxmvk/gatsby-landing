@@ -6,7 +6,7 @@ import CopyrightPolicy from "../../components/policies/copyright-policy/copyrigh
 import PrivacyPolicy from "../../components/policies/privacy-policy/privacy-policy";
 import styles from "./privacy-notice.module.scss";
 
-const PrivacyNotice = () => {
+const PrivacyNotice = ({ location }) => {
   let [slideNumber, setSlideNumber] = useState(1);
 
   const switchContent = (currentSlide) => {
@@ -19,7 +19,7 @@ const PrivacyNotice = () => {
   }
 
   return (
-    <Layout>
+    <Layout location={location}>
       <div className={styles.notice}>
         <div className={styles.notice__title}>
           <h1>Privacy notice</h1>

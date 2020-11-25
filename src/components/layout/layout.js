@@ -18,14 +18,14 @@ export const MENU_LINKS_QUERY = graphql`
   }
 `;
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location }) => {
 
   return (
     <StaticQuery
       query={MENU_LINKS_QUERY}
       render={data => (
         <div className={styles.layout}>
-          <Sidebar />
+          <Sidebar location={location} menuLinks={data.site.siteMetadata.menuLinks}/>
           <div className={styles.layout__container}>
             <Header menuLinks={data.site.siteMetadata.menuLinks}/>
             <div className={styles.layout__content}>

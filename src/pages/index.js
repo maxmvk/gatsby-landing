@@ -4,11 +4,11 @@ import { graphql, Link } from "gatsby";
 import styles from "./home.module.scss";
 import { Button } from "@material-ui/core";
 
-const Home = ({ data }) => {
+const Home = ({ data, location }) => {
   const publicURL = data.allFile.edges[0].node.publicURL;
 
   return (
-    <Layout>
+    <Layout location={location}>
       <div className={styles.home}>
         <img src={publicURL} alt="logo"/>
         <p>Welcome to CELLR! The one stop for you to curate every part of your wine life, connect with vineyards, insight on specials, and locate hard to source wines!</p>

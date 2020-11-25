@@ -3,12 +3,12 @@ import Layout from "../../components/layout/layout";
 import styles from "./faq.module.scss";
 import { graphql } from "gatsby";
 
-const Faq = ({ data }) => {
+const Faq = ({ data, location }) => {
   const partners = data.site.siteMetadata.partners;
   const [partnerNumber, setNumber] = useState(0);
 
   return (
-    <Layout>
+    <Layout location={location}>
       <div className={styles.partners}>
         <div className={styles.grid}>
           {partners.map((partner, index) => (

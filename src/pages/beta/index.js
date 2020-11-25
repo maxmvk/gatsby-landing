@@ -8,7 +8,7 @@ import Engagement from "../../components/beta/engagement/engagement";
 import BetaUser from "../../components/beta/beta-user/beta-user";
 import Layout from "../../components/layout/layout";
 
-const Beta = () => {
+const Beta = ({ location }) => {
   let [slideNumber, setSlideNumber] = useState(1);
 
   const switchContent = (currentSlide) => {
@@ -25,7 +25,7 @@ const Beta = () => {
   }
 
   return (
-    <Layout>
+    <Layout location={location}>
       <div className={styles.beta}>
         <div className={styles.beta__content}>
           {switchContent(slideNumber)}

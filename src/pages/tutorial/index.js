@@ -5,11 +5,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleLeft, faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
 import Layout from "../../components/layout/layout";
 
-const Tutorial = ({ data }) => {
+const Tutorial = ({ data, location }) => {
   const publicURL = data.allFile.edges[0].node.publicURL;
   
   return (
-    <Layout>
+    <Layout location={location}>
       <div className={styles.tutorial}>
         <div className={styles.tutorial__slider}>
           <FontAwesomeIcon icon={faArrowAltCircleLeft}/>

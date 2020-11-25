@@ -3,7 +3,7 @@ import styles from "./feedback.module.scss";
 import TextareaAutosize from 'react-textarea-autosize';
 import Layout from "../../components/layout/layout";
 
-const Feedback = () => {
+const Feedback = ({ location }) => {
   const [state, setState] = useState({ name: "", email: "", message: "" });
 
   const handleInputChange = event => {
@@ -16,7 +16,7 @@ const Feedback = () => {
   }
 
   return (
-    <Layout>
+    <Layout location={location}>
       <div className={styles.feedback}>
         <h1>Send your feedback</h1>
         <p>

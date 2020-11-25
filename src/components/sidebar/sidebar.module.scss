@@ -1,7 +1,25 @@
 @import "src/styles/index";
 
 .sidebar {
+  display: flex;
+  justify-content: space-between;
   max-width: 350px;
   width: 100%;
   border-right: 1px solid $dark-grey-color;
+  padding: 45px;
+
+  &__container {
+    @include flex-column-center;
+    height: 100%;
+  }
+
+  &__logo {
+    align-self: flex-start;
+
+    img {
+      height: 40px;
+      max-width: 180px;
+      margin: 0;
+    }
+  }
 }

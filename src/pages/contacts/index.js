@@ -3,7 +3,7 @@ import styles from "./contacts.module.scss";
 import TextareaAutosize from 'react-textarea-autosize';
 import Layout from "../../components/layout/layout";
 
-const Contacts = () => {
+const Contacts = ({ location }) => {
   const [state, setState] = useState({ name: "", email: "", message: "" });
 
   const handleInputChange = event => {
@@ -16,7 +16,7 @@ const Contacts = () => {
   }
 
   return (
-    <Layout>
+    <Layout location={location}>
       <div className={styles.contacts}>
         <div className={styles.contacts__info}>
           <h1>Info</h1>

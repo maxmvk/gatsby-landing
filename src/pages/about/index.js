@@ -2,10 +2,10 @@ import React from "react";
 import Layout from "../../components/layout/layout";
 import styles from "./about.module.scss";
 
-const About = () => {
+const About = ({ location }) => {
 
   return (
-    <Layout>
+    <Layout location={location}>
       <div className={styles.about}>
         <div className={styles.about__info}>
           <h1>About</h1>
