@@ -1,5 +1,10 @@
 @import "var/index.scss";
 
+html {
+  font-family: 'Roboto', sans-serif !important; 
+  overflow-y: auto;
+}
+
 body { 
   margin: 0;
   font-family: 'Roboto', sans-serif !important; 

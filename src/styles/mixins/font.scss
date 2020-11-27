@@ -23,6 +23,11 @@ $font-size-xl: 72px;
   font-weight: $font-weight-normal;
 }
 
+@mixin font-semi-bold-xs {
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semi-bold;
+}
+
 @mixin font-normal-s {
   font-size: $font-size-s;
   font-weight: $font-weight-normal;

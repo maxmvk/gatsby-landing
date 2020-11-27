@@ -36,127 +36,66 @@ module.exports = {
         link: `/beta`
       }
     ],
-    partners: [
+    faqs: [
       {
-        title: `Logo`,
-        text: `Non pulvinar neque laoreet suspendisse interdum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-        incididunt ut labore et dolore magna aliqua. Tortor vitae purus faucibus ornare 
-        suspendisse sed. Lacus laoreet non curabitur gravida arcu. Adipiscing vitae proin 
-        sagittis nisl rhoncus mattis rhoncus urna neque. Orci sagittis eu volutpat odio 
-        facilisis mauris sit amet massa. Pharetra pharetra massa massa ultricies mi quis 
-        hendrerit dolor magna. Purus in massa tempor nec feugiat nisl pretium. Semper quis 
-        lectus nulla at. Orci phasellus egestas tellus rutrum tellus. Metus aliquam 
-        eleifend mi in. Sed risus pretium quam vulputate dignissim. Pulvinar elementum 
-        integer enim neque volutpat ac tincidunt vitae. Cras fermentum odio eu feugiat 
-        pretium nibh.`
+        question: `I don’t have my wine inventoried, but can I still ask to trade with another cellar owner?`,
+        answer: `We’ve tried to make this as easy a process as possible. You have the option of syncing your 
+        Cellar Tracker inventory or you can simply export your inventory from whatever platform you are 
+        currently using and our team is happy to assist with your import.`
       },
       {
-        title: `Logo`,
-        text: `Cras fermentum odio eu feugiat pretium nibh. Non pulvinar neque laoreet 
-        suspendisse interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-        incididunt ut labore et dolore magna aliqua. Tortor vitae purus faucibus ornare 
-        suspendisse sed. Lacus laoreet non curabitur gravida arcu. Adipiscing vitae proin 
-        sagittis nisl rhoncus mattis rhoncus urna neque. Orci sagittis eu volutpat odio 
-        facilisis mauris sit amet massa. Pharetra pharetra massa massa ultricies mi quis 
-        hendrerit dolor magna. Purus in massa tempor nec feugiat nisl pretium. Semper quis 
-        lectus nulla at. Orci phasellus egestas tellus rutrum tellus. Metus aliquam 
-        eleifend mi in. Sed risus pretium quam vulputate dignissim. Pulvinar elementum 
-        integer enim neque volutpat ac tincidunt vitae.`
+        question: `How do I get my inventory entered in CELLR if I already have it entered on another site?`,
+        answer: `We’ve tried to make this as easy a process as possible. You have the option of syncing your 
+        Cellar Tracker inventory or you can simply export your inventory from whatever platform you are 
+        currently using and our team is happy to assist with your import.`
       },
       {
-        title: `Logo`,
-        text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-        incididunt ut labore et dolore magna aliqua. Tortor vitae purus faucibus ornare 
-        suspendisse sed. Lacus laoreet non curabitur gravida arcu. Adipiscing vitae proin 
-        sagittis nisl rhoncus mattis rhoncus urna neque. Orci sagittis eu volutpat odio 
-        facilisis mauris sit amet massa. Pharetra pharetra massa massa ultricies mi quis 
-        hendrerit dolor magna. Purus in massa tempor nec feugiat nisl pretium. Semper quis 
-        lectus nulla at. Orci phasellus egestas tellus rutrum tellus. Metus aliquam 
-        eleifend mi in. Sed risus pretium quam vulputate dignissim. Pulvinar elementum 
-        integer enim neque volutpat ac tincidunt vitae. Cras fermentum odio eu feugiat 
-        pretium nibh. Non pulvinar neque laoreet suspendisse interdum.`
+        question: `Can I use CELLR in conjunction with other inventory sites?`,
+        answer: `We’ve tried to make this as easy a process as possible. You have the option of syncing your 
+        Cellar Tracker inventory or you can simply export your inventory from whatever platform you are 
+        currently using and our team is happy to assist with your import.`
       },
       {
-        title: `Logo`,
-        text: `Pulvinar elementum integer enim neque volutpat ac tincidunt vitae. 
-        Cras fermentum odio eu feugiat pretium nibh. Non pulvinar neque laoreet suspendisse 
-        interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-        incididunt ut labore et dolore magna aliqua. Tortor vitae purus faucibus ornare 
-        suspendisse sed. Lacus laoreet non curabitur gravida arcu. Adipiscing vitae proin 
-        sagittis nisl rhoncus mattis rhoncus urna neque. Orci sagittis eu volutpat odio 
-        facilisis mauris sit amet massa. Pharetra pharetra massa massa ultricies mi quis 
-        hendrerit dolor magna. Purus in massa tempor nec feugiat nisl pretium. Semper quis 
-        lectus nulla at. Orci phasellus egestas tellus rutrum tellus. Metus aliquam 
-        eleifend mi in. Sed risus pretium quam vulputate dignissim.`
+        question: `Can I just send you an export of my cellar inventory and you assist with the import?`,
+        answer: `We’ve tried to make this as easy a process as possible. You have the option of syncing your 
+        Cellar Tracker inventory or you can simply export your inventory from whatever platform you are 
+        currently using and our team is happy to assist with your import.`
       },
       {
-        title: `Logo`,
-        text: `Metus aliquam eleifend mi in. Sed risus pretium quam vulputate dignissim. 
-        Pulvinar elementum integer enim neque volutpat ac tincidunt vitae. 
-        Cras fermentum odio eu feugiat pretium nibh. Non pulvinar neque laoreet suspendisse interdum. 
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-        incididunt ut labore et dolore magna aliqua. Tortor vitae purus faucibus ornare 
-        suspendisse sed. Lacus laoreet non curabitur gravida arcu. Adipiscing vitae proin 
-        sagittis nisl rhoncus mattis rhoncus urna neque. Orci sagittis eu volutpat odio 
-        facilisis mauris sit amet massa. Pharetra pharetra massa massa ultricies mi quis 
-        hendrerit dolor magna. Purus in massa tempor nec feugiat nisl pretium. Semper quis 
-        lectus nulla at. Orci phasellus egestas tellus rutrum tellus.`
+        question: `Will I be able to sync my CELLR inventory with any other platforms?`,
+        answer: `We’ve tried to make this as easy a process as possible. You have the option of syncing your 
+        Cellar Tracker inventory or you can simply export your inventory from whatever platform you are 
+        currently using and our team is happy to assist with your import.`
       },
       {
-        title: `Logo`,
-        text: `Semper quis lectus nulla at. Orci phasellus egestas tellus rutrum tellus. 
-        Metus aliquam eleifend mi in. Sed risus pretium quam vulputate dignissim. 
-        Pulvinar elementum integer enim neque volutpat ac tincidunt vitae. 
-        Cras fermentum odio eu feugiat pretium nibh. Non pulvinar neque laoreet suspendisse interdum. 
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-        incididunt ut labore et dolore magna aliqua. Tortor vitae purus faucibus ornare 
-        suspendisse sed. Lacus laoreet non curabitur gravida arcu. Adipiscing vitae proin 
-        sagittis nisl rhoncus mattis rhoncus urna neque. Orci sagittis eu volutpat odio 
-        facilisis mauris sit amet massa. Pharetra pharetra massa massa ultricies mi quis 
-        hendrerit dolor magna. Purus in massa tempor nec feugiat nisl pretium.`
+        question: `I don’t have my wine inventoried, but can I still ask to trade with another cellar owner?`,
+        answer: `We’ve tried to make this as easy a process as possible. You have the option of syncing your 
+        Cellar Tracker inventory or you can simply export your inventory from whatever platform you are 
+        currently using and our team is happy to assist with your import.`
       },
       {
-        title: `Logo`,
-        text: `Purus in massa tempor nec feugiat nisl pretium. Semper quis 
-        lectus nulla at. Orci phasellus egestas tellus rutrum tellus. Metus aliquam 
-        eleifend mi in. Sed risus pretium quam vulputate dignissim. Pulvinar elementum 
-        integer enim neque volutpat ac tincidunt vitae. Cras fermentum odio eu feugiat 
-        pretium nibh. Non pulvinar neque laoreet suspendisse interdum. 
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-        incididunt ut labore et dolore magna aliqua. Tortor vitae purus faucibus ornare 
-        suspendisse sed. Lacus laoreet non curabitur gravida arcu. Adipiscing vitae proin 
-        sagittis nisl rhoncus mattis rhoncus urna neque. Orci sagittis eu volutpat odio 
-        facilisis mauris sit amet massa. Pharetra pharetra massa massa ultricies mi quis 
-        hendrerit dolor magna.`
+        question: `How do I get my inventory entered in CELLR if I already have it entered on another site?`,
+        answer: `We’ve tried to make this as easy a process as possible. You have the option of syncing your 
+        Cellar Tracker inventory or you can simply export your inventory from whatever platform you are 
+        currently using and our team is happy to assist with your import.`
       },
       {
-        title: `Logo`,
-        text: `Pharetra pharetra massa massa ultricies mi quis 
-        hendrerit dolor magna. Purus in massa tempor nec feugiat nisl pretium. Semper quis 
-        lectus nulla at. Orci phasellus egestas tellus rutrum tellus. Metus aliquam 
-        eleifend mi in. Sed risus pretium quam vulputate dignissim. Pulvinar elementum 
-        integer enim neque volutpat ac tincidunt vitae. Cras fermentum odio eu feugiat 
-        pretium nibh. Non pulvinar neque laoreet suspendisse interdum. 
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-        incididunt ut labore et dolore magna aliqua. Tortor vitae purus faucibus ornare 
-        suspendisse sed. Lacus laoreet non curabitur gravida arcu. Adipiscing vitae proin 
-        sagittis nisl rhoncus mattis rhoncus urna neque. Orci sagittis eu volutpat odio 
-        facilisis mauris sit amet massa.`
+        question: `Can I use CELLR in conjunction with other inventory sites?`,
+        answer: `We’ve tried to make this as easy a process as possible. You have the option of syncing your 
+        Cellar Tracker inventory or you can simply export your inventory from whatever platform you are 
+        currently using and our team is happy to assist with your import.`
       },
       {
-        title: `Logo`,
-        text: `Orci sagittis eu volutpat odio 
-        facilisis mauris sit amet massa. Pharetra pharetra massa massa ultricies mi quis 
-        hendrerit dolor magna. Purus in massa tempor nec feugiat nisl pretium. Semper quis 
-        lectus nulla at. Orci phasellus egestas tellus rutrum tellus. Metus aliquam 
-        eleifend mi in. Sed risus pretium quam vulputate dignissim. Pulvinar elementum 
-        integer enim neque volutpat ac tincidunt vitae. Cras fermentum odio eu feugiat 
-        pretium nibh. Non pulvinar neque laoreet suspendisse interdum.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-        incididunt ut labore et dolore magna aliqua. Tortor vitae purus faucibus ornare 
-        suspendisse sed. Lacus laoreet non curabitur gravida arcu. Adipiscing vitae proin 
-        sagittis nisl rhoncus mattis rhoncus urna neque.`
+        question: `Can I just send you an export of my cellar inventory and you assist with the import?`,
+        answer: `We’ve tried to make this as easy a process as possible. You have the option of syncing your 
+        Cellar Tracker inventory or you can simply export your inventory from whatever platform you are 
+        currently using and our team is happy to assist with your import.`
+      },
+      {
+        question: `Will I be able to sync my CELLR inventory with any other platforms?`,
+        answer: `We’ve tried to make this as easy a process as possible. You have the option of syncing your 
+        Cellar Tracker inventory or you can simply export your inventory from whatever platform you are 
+        currently using and our team is happy to assist with your import.`
       },
     ]
   },
