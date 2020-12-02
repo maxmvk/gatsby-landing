@@ -55,6 +55,11 @@ $font-size-xl: 72px;
   font-weight: $font-weight-normal;
 }
 
+@mixin font-bold-m3 {
+  font-size: $font-size-m3;
+  font-weight: $font-weight-bold;
+}
+
 @mixin font-semi-bold-l {
   font-size: $font-size-l;
   font-weight: $font-weight-semi-bold;

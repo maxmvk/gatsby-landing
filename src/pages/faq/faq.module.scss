@@ -3,6 +3,7 @@
 .faqs {
   @extend %anchor-section-column;
   border-bottom: 1px solid $dark-grey-color;
+  height: 100%;
 
   &__title {
     width: 100%;

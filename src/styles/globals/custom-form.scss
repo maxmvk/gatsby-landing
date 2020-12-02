@@ -11,19 +11,20 @@
   }
 
   input {
-    @include font-normal-m2;
-    max-width: 500px;
+    @include font-normal-xs;
     width: 100%;
-    padding: 8px 15px;
-    background-color: transparent;
-    border: 1px solid $light-grey-color;
+    height: 40px;
+    padding: 10px 20px;
+    background-color: #00000080;
+    border: 1px solid #FFFFFF33;
     color: $white-color;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
   }
 
   textarea {
     @extend input;
     resize: none;
+    height: 160px;
   }
 
   ::placeholder { 
@@ -40,10 +41,10 @@
   }
 
   button {
-    @include font-normal-m2;
-    background-color: transparent;
+    @extend %button;
+    @include button-theme($orange-color);
+    text-transform: uppercase;
     padding: 5px 15px;
-    color: $orange-color;
     cursor: pointer;
   }
 }

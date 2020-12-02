@@ -1,43 +1,65 @@
-import { graphql } from "gatsby";
-import React from "react";
+import React, { useRef, useState } from "react";
 import styles from "./tutorial.module.scss";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowAltCircleLeft, faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
 import Layout from "../../components/layout/layout";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowDown, faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import screenImage from "../../images/screen-1.jpg"
 
-const Tutorial = ({ data, location }) => {
-  const publicURL = data.allFile.edges[0].node.publicURL;
+const Tutorial = ({ location }) => {
+  const elementRef = useRef();
+  let arr = [0, 1, 2, 3, 4];
+  let [scrolling, setScrolling] = useState(false);
+
+  const scrollToBottom = () => {
+    setScrolling(true);
+    elementRef.current.scrollTo({
+      top: elementRef.current.scrollTop + elementRef.current.firstElementChild.offsetHeight,
+      behavior: 'smooth'
+    });
+    setTimeout(() => setScrolling(false), 500);
+  }
+
+  const scrollToTop = () => {
+    setScrolling(true);
+    elementRef.current.scrollTo({
+      top: elementRef.current.scrollTop - elementRef.current.firstElementChild.offsetHeight,
+      behavior: 'smooth'
+    });
+    setTimeout(() => setScrolling(false), 500);
+  }
   
   return (
     <Layout location={location}>
       <div className={styles.tutorial}>
-        <div className={styles.tutorial__slider}>
-          <FontAwesomeIcon icon={faArrowAltCircleLeft}/>
-          <img src={publicURL} alt="tutorial"/>
-          <FontAwesomeIcon icon={faArrowAltCircleRight}/>
+        <div className={styles.tutorial__container}>
+          <h1>Tutorial</h1>
+          <p>
+            Welcome to CELLR! The one stop for you to curate every part of your wine life, 
+            connect with vineyards, insight on specials, and locate hard to source wines!
+          </p>
+          <div className={styles.tutorial__line}><span></span></div>
+          <h3>CELLR home screen</h3>
+          <p>
+            Welcome to CELLR! The one stop for you to curate every part of your wine life, 
+            connect with vineyards, insight on specials, and locate hard to source wines!
+          </p>
         </div>
-        <h1>Screen Name</h1>
-        <p>
-          Inventore, aliquid adipisci recusandae reiciendis sapiente, 
-          voluptatum in alias veniam quos earum id sit saepe nostrum maxime quaerat, 
-          molestiae fugiat eum quia voluptas. Lorem ipsum dolor sit amet, 
-          consectetur adipisicing elit.
-        </p>
+        <div className={styles.tutorial__sliderContainer}>
+          <div className={styles.tutorial__slider} ref={elementRef}>
+            {
+              arr.map(el => (
+                <img key={el} src={screenImage} alt="tutorial"/>
+              ))
+            }
+          </div>
+          <div className={styles.tutorial__arrows}>
+            <button disabled={scrolling} onClick={scrollToTop} aria-label="Up"><FontAwesomeIcon icon={faArrowUp}/></button>
+            <button disabled={scrolling} onClick={scrollToBottom} aria-label="Down"><FontAwesomeIcon icon={faArrowDown}/></button>
+          </div>
+        </div>
       </div>
     </Layout>
   );
 }
-
-export const tutorialQuery = graphql`
-  query {
-    allFile(filter: { name: { eq: "tutorial" } }) {
-      edges {
-        node {
-          publicURL
-        }
-      }
-    }
-  }
-`;
 
 export default Tutorial;

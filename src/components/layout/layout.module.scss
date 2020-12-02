@@ -11,6 +11,7 @@
   &__content {
     @include flex-column-center;
     color: $white-color;
-    padding: 0 70px;
+    padding: 140px 70px 0;
+    height: calc(100% - 145px);
   }
 }

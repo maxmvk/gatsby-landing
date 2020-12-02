@@ -1,20 +1,96 @@
 @import "src/styles/index";
 
 .tutorial {
-  @extend %anchor-section-column;
-  max-width: 1490px;
+  @extend %anchor-section-row;
+  height: 100%;
+  justify-content: space-between;
 
-  &__slider {
-    @include flex-row-center;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
     width: 100%;
-    margin-bottom: 30px;
-  
-    svg {
-      font-size: 24px;
+    margin-bottom: 90px;
+
+    h1 {
+      margin-bottom: 40px;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    h3 {
+      @include font-bold-m3;
+      text-transform: uppercase;
+      color: $orange-color;
     }
   }
 
-  p {
-    max-width: 800px;
+  &__line {
+    position: relative;
+    margin: 50px 0 30px;
+
+    span {
+      position: absolute;
+      background-color: $orange-color;
+      width: calc(100vw - 420px);
+      height: 2px;
+    }
+  }
+
+  &__sliderContainer {
+    @include flex-row-center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 450px;
+    max-height: 568px;
+    height: 100%;
+    border-bottom: 1px solid $light-grey-color;
+    border-top: 1px solid $light-grey-color;
+  }
+
+  &__slider {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+
+    img {
+      padding: 15px 0;
+      z-index: 10;
+
+      &:first-child {
+        margin-top: 45px;
+      }
+
+      &:last-child {
+        margin-bottom: 45px;
+      }
+    }
+  }
+
+  &__arrows {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 215px 0;
+    margin-left: -28px;
+
+    button {
+      @include flex-column-center;
+      width: 28px;
+      height: 28px;
+      min-width: 28px;
+      min-height: 28px;
+      border: 2px solid $light-grey-color;
+      border-radius: 50%;
+      font-size: 14px;
+      color: $light-grey-color;
+      cursor: pointer;
+      background-color: transparent;
+    }
   }
 }
