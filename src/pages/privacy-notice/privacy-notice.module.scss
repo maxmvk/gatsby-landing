@@ -1,0 +1,50 @@
+@import "src/styles/index";
+
+.notice {
+  @extend %anchor-section-column;
+  height: 100%;
+  border-bottom: 1px solid $grey-transparent-color;
+
+  &__title {
+    width: 100%;
+    height: 180px;
+    border-bottom: 1px solid $grey-transparent-color;
+  }
+
+  &__container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-top: 40px;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    margin-right: 40px;
+  }
+  
+  &__link {
+    @include font-bold-xxs;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: $white-color;
+    padding: 0;
+    height: 25px;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+    cursor: pointer;
+
+    &_active {
+      @extend .notice__link;
+      @include underlined-text($white-color);
+    }
+  }
+
+  &__content {
+    width: 100%;
+    margin-top: 5px;
+  }
+}

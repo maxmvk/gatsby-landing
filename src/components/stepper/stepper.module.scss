@@ -1,0 +1,57 @@
+@import "src/styles/index";
+
+.stepper {
+  @include flex-column-center;
+  height: 100%;
+
+  a {
+    @extend %arrow;
+  }
+
+  &__part {
+    @include flex-column-center;
+    height: 100%;
+
+    &_hidden {
+      @extend .stepper__part;
+      visibility: hidden;
+    }
+  }
+
+  &__content {
+    @include flex-column-center;
+    padding: 60px 0;
+    height: 100%;
+  }
+
+  &__line {
+    background-color: $grey-color;
+    width: 2px;
+    height: 100%;
+    margin-top: 50px;
+
+    &:first-child {
+      margin: 0 0 50px 0;
+    }
+  }
+
+  &__dots {
+    @include flex-column-center;
+    padding: 10px 0;
+  }
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+    min-height: 10px;
+    border: 2px solid $grey-color;
+    border-radius: 50%;
+    margin: 2px 0;
+
+    &_active {
+      @extend .stepper__dot;
+      background-color: $white-color;
+      border-color: $white-color;
+    }
+  }
+}

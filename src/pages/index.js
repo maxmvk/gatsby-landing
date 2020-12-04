@@ -1,44 +1,24 @@
 import React from "react";
 import Layout from "../components/layout/layout";
-import { graphql } from "gatsby";
-import About from "../components/home/about/about";
-import Home from "../components/home";
-import Tutorial from "../components/home/tutorial/tutorial";
-import Partners from "../components/home/partners/partners";
-import Feedback from "../components/home/feedback/feedback";
-import Contacts from "../components/home/contacts/contacts";
-import Beta from "../components/home/beta/beta";
+import { Link } from "gatsby";
+import styles from "./home.module.scss";
+import { Button } from "@material-ui/core";
+import logoSrc from "../images/logo.svg";
 
-const LandingPage = ({ data }) => (
-  <Layout>
-    <Home imageUrl={data.allFile.edges[0].node.publicURL}/>
-    <About />
-    <Tutorial />
-    <Partners partners={data.site.siteMetadata.partners}/>
-    <Feedback />
-    <Contacts />
-    <Beta />
-  </Layout>
-);
+const Home = ({ location }) => {
 
-export const query = graphql`
-  query {
-    allFile(filter: { name: { eq: "logo" } }) {
-      edges {
-        node {
-          publicURL
-        }
-      }
-    }
-    site {
-      siteMetadata {
-        partners {
-          title
-          text
-        }
-      }
-    }
-  }
-`
+  return (
+    <Layout location={location}>
+      <div className={styles.home}>
+        <img src={logoSrc} alt="logo"/>
+        <p>Welcome to CELLR! The one stop for you to curate every part of your wine life, connect with vineyards, insight on specials, and locate hard to source wines!</p>
+        <div className={styles.home__buttons}>
+          <Button component={Link} to="/beta/" variant="contained">Become beta user</Button>
+          <Button component={Link} to="/about/" variant="outlined">Learn more</Button>
+        </div>
+      </div>
+    </Layout>
+  );
+}
 
-export default LandingPage;
+export default Home;

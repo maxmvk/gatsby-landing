@@ -1,0 +1,48 @@
+@import "src/styles/index";
+
+.about {
+  @extend %anchor-section-row;
+  justify-content: flex-start;
+
+  &__info {
+    max-width: 600px;
+    width: 100%;
+    margin-right: 100px;
+  }
+
+  &__numbers {
+    @include flex-column-center;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  &__group {
+    @include flex-row-center;
+    width: 100%;
+
+    &:first-child {
+      margin-bottom: 50px;
+    }
+
+    div {
+      @include flex-column-center;
+      margin-right: 20px;
+      width: 100%;
+    }
+  
+    h3 {
+      @include font-semi-bold-xl;
+      @include underlined-text($orange-color, 130px);
+      width: 100%;
+      text-align: center;
+      margin-bottom: 10px;
+      height: 90px;
+    }
+  
+    p {
+      @include font-normal-m1;
+      text-transform: uppercase;
+      margin: 0;
+    }
+  }
+}

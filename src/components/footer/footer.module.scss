@@ -2,52 +2,33 @@
 
 .footer {
   position: fixed;
-  width: 100%;
+  width: calc(100% - #{$sidebar-width});
   bottom: 0;
-  background-color: $black-color;
+  display: flex;
+  padding: 40px $content-padding-horizontal;
+  height: $header-footer-height;
 
-  &__container {
-    @extend %content-container;
-    padding: 0 30px 70px;
-    align-items: flex-end;
-  }
+  &__item {
+    @include font-normal-xxs;
+    margin: 0 25px;
+    color: $grey-color;
+    height: 25px;
 
-  &__info {
-    display: flex;
-    color: $light-grey-color;
+    &:first-child {
+      margin-left: 0;
+    }
 
-    p {
-      padding: 0 15px;
-      margin: 0;
+    &_active {
+      @include underlined-text($orange-color);
+      color: $white-color;
     }
   }
 
-  &__scroll {
-    margin: 0 20% 0 auto;
-
-    a {
-      @include flex-column-center;
-      margin: 0;
-    }
-
-    p {
-      @include font-normal-m1;
-      color: $light-grey-color;
-      margin: 20px 0 0;
-    }
-
-    &_icon {
-      font-size: 42px;
-    }
+  svg {
+    font-size: 18px;
   }
 
-  &__icons {
-    display: flex;
-    margin-left: auto;
-
-    a {
-      font-size: 28px;
-      padding: 0 12px;
-    }
+  p {
+    margin-bottom: 0;
   }
 }

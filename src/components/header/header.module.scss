@@ -2,62 +2,44 @@
 
 .header {
   position: fixed;
-  width: 100%;
-  background-color: $black-color;
+  width: calc(100% - #{$sidebar-width});
+  display: flex;
+  padding: 40px $content-padding-horizontal;
+  height: $header-footer-height;
 
-  &__container {
-    @extend %content-container;
-    padding: 70px 30px 40px;
-    align-items: center;
+  a {
+    @include font-bold-xxs;
+    height: 35px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-right: 30px;
+
+    &:hover {
+      @include underlined-text($orange-color);
+
+      &:last-child {
+        @include underlined-text($white-color);
+      }
+    }
+
+    &:last-child {
+      color: $orange-color;
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+
+  &_active {
+    @include underlined-text($orange-color);
+
+    &:last-child {
+      @include underlined-text($white-color);
+    }
   }
 
   &__logo {
     height: 50px;
     max-width: 180px;
     margin: 0;
-  }
-
-  a {
-    @include font-normal-m3;
-    height: 45px;
-    white-space: nowrap;
-
-    &:first-child {
-      height: unset;
-    }
-  }
-
-  &__nav {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 80px;
-    width: 100%;
-
-    a {
-      padding: 0 10px;
-
-      &:hover {
-        @include underlined-text($white-color);
-      }
-
-      &:last-child {
-        color: $orange-color;
-        margin-left: auto;
-      }
-
-      &:last-child:hover  {
-        @include underlined-text($orange-color);
-        background-size: 90% 3px;
-      }
-    }
-
-    &_active {
-      @include underlined-text($white-color);
-
-      &:last-child {
-        @include underlined-text($orange-color);
-        background-size: 90% 3px;
-      }
-    }
   }
 }

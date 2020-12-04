@@ -1,0 +1,38 @@
+@import "src/styles/index";
+
+.contacts {
+  @extend %anchor-section-column;
+  align-items: flex-start;
+
+  &__container {
+    @include flex-row-center;
+    align-items: flex-start;
+  }
+
+  &__info {
+    width: 100%;
+    margin-right: 42px;
+
+    a {
+      color: $orange-color;
+      font-weight: 900;
+      margin-left: 5px;
+    }
+
+    p:last-child {
+      margin-top: 50px;
+    }
+  }
+
+  &__form {
+    @extend %custom-form;
+
+    textarea {
+      margin-bottom: 30px;
+    }
+
+    button {
+      align-self: flex-end;
+    }
+  }
+}
