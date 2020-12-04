@@ -9,31 +9,45 @@ module.exports = {
     menuLinks: [
       {
         name: `Home`,
-        link: `/`
+        link: `/`,
+        imageUrl: `/background-1-2.png`,
+        sidebarUrl: `/background-1-1.png`
       },
       {
         name: `About`,
-        link: `/about`
+        link: `/about/`,
+        imageUrl: `/background-2-2.png`,
+        sidebarUrl: `/background-2-1.png`
       },
       {
         name: `Tutorial`,
-        link: `/tutorial`
+        link: `/tutorial/`,
+        imageUrl: `/background-3-2.png`,
+        sidebarUrl: `/background-3-1.png`
       },
       {
         name: `FAQ`,
-        link: `/faq`
+        link: `/faq/`,
+        imageUrl: `/background-4-2.png`,
+        sidebarUrl: `/background-4-1.png`
       },
       {
         name: `Feedback`,
-        link: `/feedback`
+        link: `/feedback/`,
+        imageUrl: `/background-5-2.png`,
+        sidebarUrl: `/background-5-1.png`
       },
       {
         name: `Contacts`,
-        link: `/contacts`
+        link: `/contacts/`,
+        imageUrl: `/background-6-2.png`,
+        sidebarUrl: `/background-6-1.png`
       },
       {
         name: `Become Beta User`,
-        link: `/beta`
+        link: `/beta/`,
+        imageUrl: `/background-7-2.png`,
+        sidebarUrl: `/background-7-1.png`
       }
     ],
     faqs: [

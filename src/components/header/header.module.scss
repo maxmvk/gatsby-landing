@@ -2,22 +2,24 @@
 
 .header {
   position: fixed;
-  width: calc(100% - 350px);
-  background-color: $black-color;
+  width: calc(100% - #{$sidebar-width});
   display: flex;
-  align-items: center;
-  padding: 0 70px;
-  height: 140px;
+  padding: 40px $content-padding-horizontal;
+  height: $header-footer-height;
 
   a {
-    @include font-bold-s;
-    height: 45px;
+    @include font-bold-xxs;
+    height: 35px;
     text-transform: uppercase;
     white-space: nowrap;
     margin-right: 30px;
 
     &:hover {
       @include underlined-text($orange-color);
+
+      &:last-child {
+        @include underlined-text($white-color);
+      }
     }
 
     &:last-child {
@@ -29,6 +31,10 @@
 
   &_active {
     @include underlined-text($orange-color);
+
+    &:last-child {
+      @include underlined-text($white-color);
+    }
   }
 
   &__logo {

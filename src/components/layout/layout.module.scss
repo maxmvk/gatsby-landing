@@ -4,14 +4,24 @@
   display: flex;
 
   &__container {
+    position: relative;
     width: 100%;
     height: 100vh;
+  }
+
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+    z-index: -1;
   }
 
   &__content {
     @include flex-column-center;
     color: $white-color;
-    padding: 140px 70px 0;
-    height: calc(100% - 145px);
+    padding: $header-footer-height $content-padding-horizontal 0;
+    height: calc(100% - #{$header-footer-height});
   }
 }

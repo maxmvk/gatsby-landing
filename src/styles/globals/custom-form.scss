@@ -43,8 +43,5 @@
   button {
     @extend %button;
     @include button-theme($orange-color);
-    text-transform: uppercase;
-    padding: 5px 15px;
-    cursor: pointer;
   }
 }

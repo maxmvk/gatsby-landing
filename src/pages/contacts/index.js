@@ -36,7 +36,7 @@ const Contacts = ({ location }) => {
               CELLR is currently available as an invite only app on Apple Test Flight. We are 
               constantly adding new Users and would love to have you as a part of the CELLR community! 
               To get added to our Beta group send us an message with your info or visit our 
-              <Link to="/beta">Become Beta User</Link> page.
+              <Link to="/beta/">Become Beta User</Link> page.
             </p>
           </div>
           <form onSubmit={handleSubmit} autoComplete="off" className={styles.contacts__form}>

@@ -10,12 +10,22 @@ $font-size-s: 16px;
 $font-size-m1: 20px;
 $font-size-m2: 22px;
 $font-size-m3: 24px;
-$font-size-l: 32px;
+$font-size-l: 36px;
 $font-size-xl: 72px;
 
 @mixin font-normal-xxs {
   font-size: $font-size-xxs;
   font-weight: $font-weight-normal;
+}
+
+@mixin font-semi-bold-xxs {
+  font-size: $font-size-xxs;
+  font-weight: $font-weight-semi-bold;
+}
+
+@mixin font-bold-xxs {
+  font-size: $font-size-xxs;
+  font-weight: $font-weight-bold;
 }
 
 @mixin font-normal-xs {

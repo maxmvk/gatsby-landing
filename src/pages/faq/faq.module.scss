@@ -2,20 +2,20 @@
 
 .faqs {
   @extend %anchor-section-column;
-  border-bottom: 1px solid $dark-grey-color;
+  border-bottom: 1px solid $grey-transparent-color;
   height: 100%;
 
   &__title {
     width: 100%;
     height: 120px;
-    border-bottom: 1px solid $dark-grey-color;
+    border-bottom: 1px solid $grey-transparent-color;
   }
 
   &__container {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: calc(100% - 145px);
+    height: calc(100% - 150px);
     margin: 25px 0;
   }
 
@@ -42,17 +42,7 @@
     margin-left: 56px;
 
     button {
-      @include flex-column-center;
-      width: 28px;
-      height: 28px;
-      min-width: 28px;
-      min-height: 28px;
-      border: 2px solid $light-grey-color;
-      border-radius: 50%;
-      font-size: 14px;
-      color: $light-grey-color;
-      cursor: pointer;
-      background-color: transparent;
+      @extend %arrow;
     }
   }
 }

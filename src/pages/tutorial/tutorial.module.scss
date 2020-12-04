@@ -1,5 +1,7 @@
 @import "src/styles/index";
 
+$line-margin-sum: $sidebar-width + $content-padding-horizontal;
+
 .tutorial {
   @extend %anchor-section-row;
   height: 100%;
@@ -34,7 +36,7 @@
     span {
       position: absolute;
       background-color: $orange-color;
-      width: calc(100vw - 420px);
+      width: calc(100vw - #{$line-margin-sum});
       height: 2px;
     }
   }
@@ -46,8 +48,8 @@
     max-width: 450px;
     max-height: 568px;
     height: 100%;
-    border-bottom: 1px solid $light-grey-color;
-    border-top: 1px solid $light-grey-color;
+    border-bottom: 1px solid $grey-transparent-color;
+    border-top: 1px solid $grey-transparent-color;
   }
 
   &__slider {
@@ -72,25 +74,17 @@
   }
 
   &__arrows {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    @include flex-column-center;
     height: 100%;
-    padding: 215px 0;
     margin-left: -28px;
 
     button {
-      @include flex-column-center;
-      width: 28px;
-      height: 28px;
-      min-width: 28px;
-      min-height: 28px;
-      border: 2px solid $light-grey-color;
-      border-radius: 50%;
-      font-size: 14px;
-      color: $light-grey-color;
-      cursor: pointer;
-      background-color: transparent;
+      @extend %arrow;
+      margin-bottom: 50px;
+
+      &:last-child {
+        margin: 50px 0 0;
+      }
     }
   }
 }

@@ -12,6 +12,8 @@ export const MENU_LINKS_QUERY = graphql`
         menuLinks {
           name
           link
+          imageUrl
+          sidebarUrl
         }
       }
     }
@@ -27,6 +29,11 @@ const Layout = ({ children, location }) => {
         <div className={styles.layout}>
           <Sidebar location={location} menuLinks={data.site.siteMetadata.menuLinks}/>
           <div className={styles.layout__container}>
+            {data.site.siteMetadata.menuLinks.map(link => (
+              location.pathname === link.link
+              ? <img key={link.name} src={link.imageUrl} alt="" className={styles.layout__image}/>
+              : null
+            ))}
             <Header menuLinks={data.site.siteMetadata.menuLinks}/>
             <div className={styles.layout__content}>
               {children}

@@ -39,7 +39,7 @@
 
     button {
       @include font-normal-xs;
-      @include button-theme(#ffffff17);
+      @include button-theme(rgba(255, 255, 255, 0.05));
       height: 40px;
       width: 100%;
       padding: 0 20px;
@@ -66,9 +66,5 @@
 
   &__submit {
     align-self: flex-end;
-
-    button {
-      min-width: 180px;
-    }
   }
 }
